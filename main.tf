@@ -7,8 +7,6 @@ variable "input_file_path" {
 locals {
   Queue = [for line in split("\n", file(var.input_file_path)) : {
     Queue_name = split(":", line)[0]
-    Threshold = split(":", line)[1]
-    sustain = split(":", line)[2]
   }]
 }
 
