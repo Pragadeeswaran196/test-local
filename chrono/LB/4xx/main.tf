@@ -6,7 +6,7 @@ locals {
 
   Queue = [
     for line in local.non_empty_lines : {
-      Queue_name = split(",", line)[0]
+      LB_name = split(",", line)[0]
       Threshold  = length(split(",", line)) >= 2 ? split(",", line)[1] : ""
       sustain    = length(split(",", line)) >= 3 ? split(",", line)[2] : ""
     }
