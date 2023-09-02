@@ -4,7 +4,7 @@ locals {
     for line in local.lines : line if trimspace(line) != ""
   ]
 
-  Queue = [
+  lb = [
     for line in local.non_empty_lines : {
       LB_name = split(",", line)[0]
       Threshold  = length(split(",", line)) >= 2 ? split(",", line)[1] : ""
