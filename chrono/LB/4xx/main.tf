@@ -12,9 +12,9 @@ locals {
     }
   ]
 }
-resource "chronosphere_monitor" "critical_prod_aws_inf_elb_backend_4xx" {
-  name                   = "Critical | PROD | AWS INF | ELB  |  backend_4XX Ratio Breached Upper Threshold"
-  slug                   = "critical-prod-aws-inf-elb-backend-4xx"
+resource "chronosphere_monitor" "critical_prod_aws_inf_elb_backend_4xx_test" {
+  name                   = "Critical | PROD | AWS INF | ELB  |  backend_4XX Ratio Breached Upper Threshold-test"
+  slug                   = "critical-prod-aws-inf-elb-backend-4xx_test"
   bucket_id              = "techops-prod-alerts"
   notification_policy_id = "techops-prod-alerts"
   query {
