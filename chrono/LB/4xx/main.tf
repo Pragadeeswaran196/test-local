@@ -18,7 +18,7 @@ resource "chronosphere_monitor" "critical_prod_aws_inf_elb_backend_4xx_test" {
   bucket_id              = "techops-prod-alerts"
   notification_policy_id = "techops-prod-alerts"
   query {
-    prometheus_expr = ""
+    prometheus_expr = "up"
   }
   series_conditions {
     condition {
