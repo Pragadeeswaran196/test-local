@@ -1,5 +1,5 @@
 locals {
-  lines = split("\n", file("Backend_4xx.txt"))
+  lines = split("\n", file("backend_4xx.txt"))
   non_empty_lines = [
     for line in local.lines : line if trimspace(line) != ""
   ]
